@@ -1,0 +1,2 @@
+Prefix plugins/RemoveZero/example
+Plugin RemoveZero inputfile abundances.csv outputfile abundances.fixed.csv
