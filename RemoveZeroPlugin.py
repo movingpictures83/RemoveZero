@@ -1,5 +1,13 @@
 import sys
 
+def is_number(s):
+    try:
+        float(s)
+        return True
+    except ValueError:
+        return False
+
+
 class RemoveZeroPlugin:
    def input(self, filename):
       filestuff = open(filename, 'r')
@@ -24,7 +32,10 @@ class RemoveZeroPlugin:
       for line in self.lines:
          elements = line.split(',')
          for i in range(1, len(elements)): # Don't count the sample
-            self.sums[self.taxa[i]] += float(elements[i])
+            if (not is_number(elements[i])):
+               self.sums[self.taxa[i]] += 1
+            else:
+               self.sums[self.taxa[i]] += float(elements[i])
       
       for i in range(1, len(self.taxa)):
          if (self.sums[self.taxa[i]] == 0):
