@@ -2,7 +2,7 @@
 # Language: Python
 # Input: CSV 
 # Output: CSV
-# Tested with: PluMA 1.0, Python 3.6
+# Tested with: PluMA 1.1, Python 3.6
 
 PluMA plugin to take a CSV file (rows samples, columns entities)
 and remove all entities that have zero abundances in all samples.
